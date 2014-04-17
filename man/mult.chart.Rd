@@ -8,7 +8,9 @@ Multivariate Control Chart
 This function computes the most widely used multivariate control chart such as: Hotelling, Chi-squared, MEWMA, MCUSUM and Generelized Variance control chart.  
 }
 \usage{
-mult.chart(type = c("chi", "t2", "mewma", "mcusum", "mcusum2"), x, Xmv, S, colm, alpha = 0.01, lambda = 0.1, k = 0.5, h = 5.5, phase = 1, method = "sw", ...)
+mult.chart(type = c("chi", "t2", "mewma", "mcusum", "mcusum2"), x, Xmv,
+ S, colm, alpha = 0.01, lambda = 0.1, k = 0.5, h = 5.5, phase = 1,
+ method = "sw", ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -8,7 +8,7 @@ confidence ellipse
 It returns the contour to construct a confidence ellipse according to the knowledge or not of the parameters of the distribution (mu and sigma). 
 }
 \usage{
-ellip(type = c("chi", "t2"), x, Xmv, S, phase = 1, alpha = 0.01, method = "sw", colm, ...)
+ellip(type = c("chi", "t2"), x, Xmv, S, phase=1, alpha=0.01, method="sw", colm,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

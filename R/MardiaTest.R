@@ -28,4 +28,7 @@ function(data)
     K4.stat <- (K4-mn)/sqrt(vr)
     K4.pval <- 1-pnorm(abs(K4.stat))
     c(K3,K3.pval,K4,K4.pval)
-  }
+
+outList = list ("skewness" = K3, "p.value" = K3.pval, "kurtosis" = K4, "p.value" = K4.pval)
+ return(outList)
+	}

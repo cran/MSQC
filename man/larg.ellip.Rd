@@ -8,7 +8,8 @@ Largest ellipsoid
 It builds the largest ellipsoid centered at the Target. It uses the g
 }
 \usage{
-larg.ellip(LSL, USL, n = 25, box = FALSE, add = TRUE, xlim = xlim, ylim = ylim, zlim = zlim, xlab = "xlab", ylab = "ylab", zlab = "zlab", col = 2, alpha = 0.2, ...)
+larg.ellip(LSL,USL,n=25,box=FALSE,add=TRUE,xlim=xlim,ylim=ylim,zlim=zlim,
+xlab="xlab",ylab="ylab",zlab="zlab",col=2,alpha=0.2,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

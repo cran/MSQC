@@ -6,15 +6,15 @@
 Multivariate Statistical Quality Control
 }
 \description{
-It allows to compute some of the Multivariate Statistical Quality Control tools. Contains the main alternatives of multivariate control chart such as: Hotelling, Chi squared, MEWMA, MCUSUM and Generelized Variance control chart. 
+It computates some of the Multivariate Statistical Quality Control tools. It contains the main alternatives of multivariate control chart such as: Hotelling, Chi squared, MEWMA, MCUSUM and Generelized Variance control chart. 
 Also, it includes some tools for assessing multivariate normality like: Mardia, Royston and Henze Zirkler test and the univariate D'Agostino test. Moreover, it contains ten didactic datasets.
 }
 \details{
 \tabular{ll}{
 Package: \tab MSQC\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-06-22\cr
+Version: \tab 1.0.1\cr
+Date: \tab 2014-04-13\cr
 License: \tab GPL(>=2)\cr
 }
 
@@ -22,7 +22,7 @@ License: \tab GPL(>=2)\cr
 \author{
 Edgar Santos-Fernandez
 
-Maintainer: Edgar Santos-Fernandez <edgar.santos@etecsa.cu>
+Maintainer: Edgar Santos-Fernandez <edgar.santosfdez@gmail.com>
 
 }
 \references{
@@ -66,6 +66,8 @@ Prabhu, S.S., Runger, G.C.: Designing a multivariate EWMA control chart. Journal
 
 Runger, G.C., Alt, F.B., Montgomery, D.C.: Contributors to a multivariate SPC chart signal. Communications in Statistics: Theory and Methods 25, (1996)
 
+Santos-Fernandez, E.: Multivariate Statistical Quality Control Using R. Springer, 14, (2013) 
+		
 Sullivan, J.H., Woodall, W.H.: A Comparison of Multivariate Quality Control Charts for Individual Observations. Journal of Quality Technology 28(4) (1996)
 
 Tracy, N., Young, Mason, R.: Multivariate Control Charts for Individual Observations. Journal of Quality Technology 24 (1992)
