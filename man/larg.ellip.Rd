@@ -5,7 +5,7 @@
 Largest ellipsoid
 }
 \description{
-It builds the largest ellipsoid centered at the Target. It uses the g
+It builds the largest ellipsoid centered at the Target. 
 }
 \usage{
 larg.ellip(LSL,USL,n=25,box=FALSE,add=TRUE,xlim=xlim,ylim=ylim,zlim=zlim,
@@ -58,8 +58,7 @@ is the upper specification limit
 }
 
 
-\author{
-This fucntion is a little modification of a function of the rgl package by Duncan Murdoch 
+\author{These codes are based on a function written by Duncan Murdoch (rgl package)
 }
 
 

@@ -1,3 +1,13 @@
+# MSQC package 
+# Functions included in the book: 
+# Santos-Fernandez, Edgar. Multivariate Statistical Quality Control Using R. Springer. 2013.
+# volume 14, isbn 9781461454533, http://www.springer.com/statistics/computational+statistics/book/978-1-4614-5452-6}
+ 
+# Copyright (C) 2013-2015 Santos-Fernandez, Edgar
+# All rights reserved.
+# These functions are licensed under the GNU General Public License (GPL-2 and GPL-3).
+
+
 mult.chart <-
 function(type = c("chi","t2", "mewma", "mcusum", "mcusum2"),
                  x, Xmv, S, colm, alpha = 0.01, lambda = 0.1, k = 0.5,
@@ -20,7 +30,7 @@ type <- match.arg(type)
 #### based on the historical data.
 #### 
      
- ###Variables
+###Variables
 p <- ncol(x) # quality characteristics
 m <- nrow(x) # number of samples or observations
 if (class(x) == "matrix" || class(x) == "data.frame") (x <- array(data.matrix(x),c(m,p,1)))
@@ -52,72 +62,73 @@ print( t3)
 
 }
 if (type == "t2") { # Hotelling Control Chart
-name <- paste("Hotelling Control Chart")
-for (ii in 1 : m){
-t2[ii,1] <- n * t(x.jk[ii,] - Xmv) %*% solve(S) %*% (x.jk[ii,] - Xmv)
-}
+	name <- paste("Hotelling Control Chart")
+	for (ii in 1 : m){
+		t2[ii,1] <- n * t(x.jk[ii,] - Xmv) %*% solve(S) %*% (x.jk[ii,] - Xmv)
+	}
 
-ifelse(n == 1, ifelse(phase == 1, 
- ucl <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha,p / 2,(((2 * (colm - 1) ^ 2) / (3 * colm - 4) - p - 1) / 2)),
- ucl<-((p * (colm + 1) * (colm - 1)) / ((colm ^ 2) - colm * p)) * qf(1 - alpha,p,colm - p)),
- ifelse(phase == 1, 
- ucl <- (p * (colm - 1) * (n - 1)) / (colm * n - colm - p + 1) * qf(1 - alpha,p,colm * n - colm - p + 1),
- ucl <- (p * (colm + 1) * (n - 1)) / (colm * n - colm - p + 1) * qf(1 - alpha,p,colm * n - colm - p + 1))
-)
-if(any(t2>ucl)){
-cat("The following(s) point(s) fall outside of the control limits" )
-t3 <- which(t2 > ucl)
-print( t3)
+	ifelse(n == 1, ifelse(phase == 1, 
+	 ucl <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha, p / 2, ((colm - p - 1) / 2) ),
+	 #ucl <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha, p / 2, (((2 * (colm - 1) ^ 2) / (3 * colm - 4) - p - 1) / 2)), This is the UCL by Sullivan and Woodall (1996). Deprecated. 
+	 ucl <- ((p * (colm + 1) * (colm - 1)) / ((colm ^ 2) - colm * p)) * qf(1 - alpha, p, colm - p)),
+	 ifelse(phase == 1, 
+	 ucl <- (p * (colm - 1) * (n - 1)) / (colm * n - colm - p + 1) * qf(1 - alpha,p,colm * n - colm - p + 1),
+	 ucl <- (p * (colm + 1) * (n - 1)) / (colm * n - colm - p + 1) * qf(1 - alpha,p,colm * n - colm - p + 1))
+	)
+	if(any(t2>ucl)){
+	cat("The following(s) point(s) fall outside of the control limits" )
+	t3 <- which(t2 > ucl)
+	print( t3)
 
-#Decomposition of T2
-for(ii in 1:length(t3)){
-    
-v=1
-k=0 
-      
-for(i in 1:p) {
-k <- k + factorial(p) / (factorial(i) * factorial(p - i)) # total number of permutations 
-}
- 
-q <- matrix(0, k, p + 3)  # matrix of all the permutations
+	#Decomposition of T2
+	for(ii in 1:length(t3)){
+		
+	v=1
+	k=0 
+		  
+	for(i in 1:p) {
+	k <- k + factorial(p) / (factorial(i) * factorial(p - i)) # total number of permutations 
+	}
+	 
+	q <- matrix(0, k, p + 3)  # matrix of all the permutations
 
-for(i in 1:p) { 
-a <- t(combn(p, i))
-   
- for(l in 1:nrow(a)) {
- for(j in 1:ncol(a)) { 
- q[v, j + 3] <- a[l, j]
-} 
- v = v + 1
-}
-}
- 
- for(i in 1:nrow(q)) { 
- b <- subset(q[i,4:ncol(q)], q[i,4:ncol(q)] > 0) 
- di<-length(b)
-   
- if(length(b) > 1) {q[i,1] <- n * t(Xmv[b] - x.jk[t3[ii],][b]) %*% solve(S [b,b]) %*% (Xmv[b]-x.jk[t3[ii],][b])}  #this column is the t2
- else( q[i,1] <- n * (x.jk[t3[ii],][b] - Xmv[b]) ^ 2 / S [b,b])
+	for(i in 1:p) { 
+	a <- t(combn(p, i))
+	   
+	 for(l in 1:nrow(a)) {
+	 for(j in 1:ncol(a)) { 
+	 q[v, j + 3] <- a[l, j]
+	} 
+	 v = v + 1
+	}
+	}
+	 
+	 for(i in 1:nrow(q)) { 
+	 b <- subset(q[i,4:ncol(q)], q[i,4:ncol(q)] > 0) 
+	 di<-length(b)
+	   
+	 if(length(b) > 1) {q[i,1] <- n * t(Xmv[b] - x.jk[t3[ii],][b]) %*% solve(S [b,b]) %*% (Xmv[b]-x.jk[t3[ii],][b])}  #this column is the t2
+	 else( q[i,1] <- n * (x.jk[t3[ii],][b] - Xmv[b]) ^ 2 / S [b,b])
 
- ifelse(n == 1, ifelse(phase == 1, 
- q[i,2] <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha,di/ 2,(((2 * (colm - 1) ^ 2) / (3 * colm - 4) - di- 1) / 2)),
- q[i,2]<-((di* (colm + 1) * (colm - 1)) / ((colm ^ 2) - colm * di)) * qf(1 - alpha,di,colm - di)),
- ifelse(phase == 1, 
- q[i,2] <- (di* (colm - 1) * (n - 1)) / (colm * n - colm - di+ 1) * qf(1 - alpha,di,colm * n - colm - di+ 1),
- q[i,2]<- (di* (colm + 1) * (n - 1)) / (colm * n - colm - di+ 1) * qf(1 - alpha,di,colm * n - colm - di+ 1))
-)
-  
- q[i,3] <- 1 - pf(q[i,1], di, colm - 1) #this column is of p-values
-}
+	 ifelse(n == 1, ifelse(phase == 1, 
+	 q[i,2] <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha,di/ 2,(((2 * (colm - 1) ^ 2) / (3 * colm - 4) - di- 1) / 2)),
+	 q[i,2]<-((di* (colm + 1) * (colm - 1)) / ((colm ^ 2) - colm * di)) * qf(1 - alpha,di,colm - di)),
+	 ifelse(phase == 1, 
+	 q[i,2] <- (di* (colm - 1) * (n - 1)) / (colm * n - colm - di+ 1) * qf(1 - alpha,di,colm * n - colm - di+ 1),
+	 q[i,2]<- (di* (colm + 1) * (n - 1)) / (colm * n - colm - di+ 1) * qf(1 - alpha,di,colm * n - colm - di+ 1))
+	)
+	  
+	 q[i,3] <- 1 - pf(q[i,1], di, colm - 1) #this column is of p-values
+	}
 
- colnames(q)<-c("t2 decomp","ucl","p-value",1:p)
- print(list("Decomposition of"=t3[ii]))
- print(round(q,4))
-          
-     }
- 
- 
-        }
+	 colnames(q)<-c("t2 decomp","ucl","p-value",1:p)
+	 print(list("Decomposition of"=t3[ii]))
+	 print(round(q,4))
+			  
+		 }
+	 
+	 
+			}
 
 
 }

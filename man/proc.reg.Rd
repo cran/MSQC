@@ -16,7 +16,7 @@ proc.reg(x, alpha = 0.0027, ...)
 a matrix of quality characteristics
 }
   \item{alpha}{
-it is the the significance level (0.0027 for default)
+it is the significance level (0.0027 for default)
 }
   \item{\dots}{
 other parameters

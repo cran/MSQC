@@ -2,10 +2,10 @@
 \alias{DAGOSTINO}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-DAgostino test
+D'Agostino test
 }
 \description{
-It computes the DAgostino test for assessing univariate normality
+It performs the D'Agostino test of univariate normality
 }
 \usage{
 DAGOSTINO(data)
@@ -18,18 +18,18 @@ DAGOSTINO(data)
 }
 
 \references{
-DAgostino, R., Pearson, E.S.: Tests for Departure from Normality. Empirical Results for the Distributions of b2 and v b1. Biometrika 60(3),(1973)
+DAgostino, R., Pearson, E.S.: Tests for Departure from Normality. Empirical Results for the Distributions of b2 and sqrt(b1). \emph{Biometrika} 60(3),(1973)
 
-DAgostino, R.B.: Transformation to normality of the null distribution of g1. Biometrika 57(3), (1970)
+D'Agostino, R.B.: Transformation to normality of the null distribution of g1. \emph{Biometrika} 57(3), (1970)
 
-DAgostino, R.B., Belanger, A., Jr, R.B.D.A.: A suggestion for using powerful and informative tests of normality. The American Statistician 44(4),(1990)
+D'Agostino, R.B., Belanger, A., Jr, R.B.D.A.: A suggestion for using powerful and informative tests of normality. \emph{The American Statistician} 44(4),(1990)
 }
 \author{
 This test is a modification of the original written in Spanish by Peter Mandeville
 }
 
 \seealso{
-Chi squared, Anderson  Darling, Kolmorov Smirnov, Jarque Bera and Shapiro Wilks tests
+Chi-squared, Anderson-Darling, Kolmogorov-Smirnov, Jarque-Bera and Shapiro-Wilks tests
 }
 \examples{
 data(bimetal1)

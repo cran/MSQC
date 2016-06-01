@@ -2,10 +2,10 @@
 \alias{ellip}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-confidence ellipse
+confidence ellipsoid
 }
 \description{
-It returns the contour to construct a confidence ellipse according to the knowledge or not of the parameters of the distribution (mu and sigma). 
+It makes a confidence ellipsoid. 
 }
 \usage{
 ellip(type = c("chi", "t2"), x, Xmv, S, phase=1, alpha=0.01, method="sw", colm,...)
@@ -16,7 +16,7 @@ ellip(type = c("chi", "t2"), x, Xmv, S, phase=1, alpha=0.01, method="sw", colm,.
 is the type of ellipsoid to constructs (chi or t2)
 }
   \item{x}{
-matrix of the quality characteristics.
+matrix containing the quality characteristics.
 }
   \item{Xmv}{
 is the mean vector
@@ -25,16 +25,16 @@ is the mean vector
 is the sample covariance matrix
 }
   \item{phase}{
-is the Phase to use. Allows to select the type of UCL to use. Only values of phase = 1 or 2 are allowed.  
+is the Phase (1 or 2) and will determine the UCL to use. Only the values phase = 1 or 2 are allowed.  
 }
   \item{alpha}{
-is the the significance level (0.01 for default)
+is the significance level (0.01 for default)
 }
   \item{method}{
-is the method to compute S. The methods sw and hm by (Sullivan,Woodall 1996) and (Holmes,Mergen 1993) are allowed
+is the method to compute S. 
 }
   \item{colm}{
-is the number of samples (m) and it is only used in Hotelling control chart for Phase II
+is the number of samples (m), which is only used in Hotelling control chart (Phase II)
 }
   \item{\dots}{
 other parameters

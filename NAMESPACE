@@ -1,2 +1,7 @@
 exportPattern("^[[:alpha:]]+")
 import(rgl)
+importFrom("graphics", "mtext", "par", "plot", "points","segments","rect","legend", "lines", "locator")
+importFrom("stats", "cor", "cov", "mahalanobis", "pchisq", "pf", "qchisq","qnorm")
+importFrom("utils", "combn")
+importFrom("stats","pnorm", "qbeta", "qf", "plnorm","var", "shapiro.test")
+export("mult.chart","covariance","ellip","gen.var", "prism", "proc.reg" )

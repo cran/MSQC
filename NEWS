@@ -1,0 +1,13 @@
+Changes in the Version 1.0.2 from 2016-05-30.
+
+--------------
+LINE 71 mult.chart 
+- The UCL for individual observations in Phase I is :
+ucl <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha, p / 2, ((colm - p - 1) / 2) ) 
+See Tracy, Young, and Mason (1992) “Multivariate Control Charts for Individual Observations,” 
+
+- The previous UCL was 
+ucl <- ((colm - 1) ^ 2) / colm * qbeta(1 - alpha, p / 2, (((2 * (colm - 1) ^ 2) / (3 * colm - 4) - p - 1) / 2)), which was propossed by
+Sullivan and Woodall (1996). “A Comparison of Multivariate Control Charts for Individual Observations,”
+This method is used by MINITAB 17.
+--------------

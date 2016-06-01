@@ -13,18 +13,18 @@ gen.var(x, ...)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-array of the quality characteristics
+an array containing the quality characteristics
 }
   \item{\dots}{
 %%     ~~Describe \code{\dots} here~~
 }
 }
 \details{
-Notice that it is a chart for rational subgroups only and n must be higher than p  
+Notice that this is a control chart for rational subgroups only and n must be higher than p  
 }
 
 \references{
-Montgomery, D.C.: Introduction to Statistical Quality Control, 5 ed. John Wiley & Sons, (2004)
+Montgomery, D.C.: Introduction to Statistical Quality Control, 5 ed. \emph{John Wiley & Sons}, (2004)
 }
 \author{
 Edgar Santos-Fernandez

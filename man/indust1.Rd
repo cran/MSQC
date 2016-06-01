@@ -2,14 +2,14 @@
 \alias{indust1}
 \docType{data}
 \title{
-Industrial dataset collected in Phase I
+Industrial dataset collected during the Phase I
 }
 \description{
 A bivariate industrial process 
 }
 \usage{data(indust1)}
 \format{
-  A data frame with 28 observations on the following 2 variables.
+  A data frame containing 28 observations.
   \describe{
     \item{\code{Var1}}{a numeric vector}
     \item{\code{Var2}}{a numeric vector}

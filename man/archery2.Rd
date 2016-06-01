@@ -2,10 +2,10 @@
 \alias{archery2}
 \docType{data}
 \title{
-Target archery dataset in the elimination stage (used as Phase II)
+Target archery dataset during the elimination stage (used as Phase II)
 }
 \description{
-It consists in an stage in which the archer shoots 52 arrows in 12 ends of six arrows.
+It consists of a stage in which the archer shoots 52 arrows.
 The information is given in x and y coordinates. 
 }
 \usage{data(archery1)}

@@ -6,15 +6,16 @@
 Multivariate Statistical Quality Control
 }
 \description{
-It computates some of the Multivariate Statistical Quality Control tools. It contains the main alternatives of multivariate control chart such as: Hotelling, Chi squared, MEWMA, MCUSUM and Generelized Variance control chart. 
-Also, it includes some tools for assessing multivariate normality like: Mardia, Royston and Henze Zirkler test and the univariate D'Agostino test. Moreover, it contains ten didactic datasets.
+It computes several multivariate control charts such as: Hotelling, Chi-squared, MEWMA, MCUSUM and Generalized Variance. 
+Ten didactic datasets are included. It includes some tools for assessing multivariate normality: Mardia's, Royston's and Henze-Zirkler's tests.
 }
+
 \details{
 \tabular{ll}{
 Package: \tab MSQC\cr
 Type: \tab Package\cr
-Version: \tab 1.0.1\cr
-Date: \tab 2014-04-13\cr
+Version: \tab 1.0.2\cr
+Date: \tab 2016-05-30\cr
 License: \tab GPL(>=2)\cr
 }
 
@@ -26,58 +27,58 @@ Maintainer: Edgar Santos-Fernandez <edgar.santosfdez@gmail.com>
 
 }
 \references{
-Bodden, K.M., Rigdon, S.E.: A Program for Approximating the In Control ARL for the MEWMA Chart. Journal of Quality Technology 31,(1999)
+Bodden, K.M., Rigdon, S.E.: A Program for Approximating the In Control ARL for the MEWMA Chart. \emph{Journal of Quality Technology} 31,(1999)
 
-Borror, C.M., Montgomery, D.C., Runger, G.C.: Robustness of the EWMA control chart to non normality. Journal of Quality Technology 31(3), (1999)
+Borror, C.M., Montgomery, D.C., Runger, G.C.: Robustness of the EWMA control chart to non normality. \emph{Journal of Quality Technology} 31(3), (1999)
 
-Camil Fuchs, R.K.: Multivariate Quality Control: theory and applications. Chapman and Hall/CRC, (1998)
+Camil Fuchs, R.K.: Multivariate Quality Control: theory and applications. \emph{Chapman and Hall/CRC}, (1998)
 
-Crosier, R.B.: Multivariate Generalizations of Cumulative Sum Quality Control Schemes. Technometrics 30(3),(1988)
+Crosier, R.B.: Multivariate Generalizations of Cumulative Sum Quality Control Schemes. \emph{Technometrics} 30(3),(1988)
 
-Healy, J.D.: A Note on Multivariate CUSUM Procedures. Technometrics 29(4), (1987)
+Healy, J.D.: A Note on Multivariate CUSUM Procedures. \emph{Technometrics} 29(4), (1987)
 
-Holmes, D.S., Mergen, A.E.: Improving the performance of T square control chart. Quality Engineering 5(4), (1993)
+Holmes, D.S., Mergen, A.E.: Improving the performance of T square control chart. \emph{Quality Engineering} 5(4), (1993)
 
 Hotelling, H.: The Generalization of Student's Ratio. Institute of Mathematical Statistics, (1931)
 
-Hotelling, H.: Multivariate Quality Control. McGraw Hill, (1947)
+Hotelling, H.: Multivariate Quality Control. \emph{McGraw Hill}, (1947)
 
-Jackson, J.E.: Quality Control Methods for two Related Variables. Industrial Quality Control 12 (1956)
+Jackson, J.E.: Quality Control Methods for two Related Variables. \emph{Industrial Quality Control} 12 (1956)
 
-Jackson, J.E.: Quality Control Methods for Several Related Variables. Technometrics 1 (1959)
+Jackson, J.E.: Quality Control Methods for Several Related Variables. \emph{Technometrics} 1 (1959)
 
-Jackson, J.E.: A User Guide to Principal Components. John Wiley & Sons, New York (1991)
+Jackson, J.E.: A User Guide to Principal Components. \emph{John Wiley & Sons}, New York (1991)
 
-Lowry, C.A., Montgomery, D.C.: A review of multivariate control charts. IIE Transactions 27(6), (1995)
+Lowry, C.A., Montgomery, D.C.: A review of multivariate control charts. \emph{IIE Transactions} 27(6), (1995)
 
-Lowry, C.A., Woodall, W.H., Champ, C.W., Rigdon, S.E.: A Multivariate Exponentially Weighted Moving Average Control Chart. Technometrics 34(1), (1992)
+Lowry, C.A., Woodall, W.H., Champ, C.W., Rigdon, S.E.: A Multivariate Exponentially Weighted Moving Average Control Chart. \emph{Technometrics} 34(1), (1992)
 
-Mason, R., Tracy, N., Young, J.: Monitoring a multivariate step process. Journal of Quality Technology 28,(1996)
+Mason, R., Tracy, N., Young, J.: Monitoring a multivariate step process. \emph{Journal of Quality Technology} 28,(1996)
 
-Mason, R.L., Tracy, N.D., Young, J.C.: Decomposition of T square for multivariate control chart interpretation. Journal of Quality Technology 27, (1995)
+Mason, R.L., Tracy, N.D., Young, J.C.: Decomposition of T square for multivariate control chart interpretation. \emph{Journal of Quality Technology} 27, (1995)
 
-Mason, R.L., Young, J.C.: Multivariate Statistical Process Control with Industrial Application, 1 ed. Society for Industrial and Applied Mathematics, (2001)
+Mason, R.L., Young, J.C.: Multivariate Statistical Process Control with Industrial Application, 1 ed. \emph{Society for Industrial and Applied Mathematics}, (2001)
 
-Montgomery, D.C.: Introduction to Statistical Quality Control, 5 ed. John Wiley & Sons, (2005)
+Montgomery, D.C.: Introduction to Statistical Quality Control, 5 ed. \emph{John Wiley & Sons}, (2005)
 
-Pignatiello, J., Runger, G.: Comparisons of Multivariate CUSUM Charts. Journal of Quality Technology 22(3),  (1990)
+Pignatiello, J., Runger, G.: Comparisons of Multivariate CUSUM Charts. \emph{Journal of Quality Technology} 22(3),  (1990)
 
-Prabhu, S.S., Runger, G.C.: Designing a multivariate EWMA control chart. Journal of Quality Technology 29, (1997)
+Prabhu, S.S., Runger, G.C.: Designing a multivariate EWMA control chart. \emph{Journal of Quality Technology} 29, (1997)
 
-Runger, G.C., Alt, F.B., Montgomery, D.C.: Contributors to a multivariate SPC chart signal. Communications in Statistics: Theory and Methods 25, (1996)
+Runger, G.C., Alt, F.B., Montgomery, D.C.: Contributors to a multivariate SPC chart signal. \emph{Communications in Statistics: Theory and Methods} 25, (1996)
 
-Santos-Fernandez, E.: Multivariate Statistical Quality Control Using R. Springer, 14, (2013) 
+Santos-Fernandez, E.: Multivariate Statistical Quality Control Using R. \emph{Springer}, 14, (2013) 
 		
-Sullivan, J.H., Woodall, W.H.: A Comparison of Multivariate Quality Control Charts for Individual Observations. Journal of Quality Technology 28(4) (1996)
+Sullivan, J.H., Woodall, W.H.: A Comparison of Multivariate Quality Control Charts for Individual Observations. \emph{Journal of Quality Technology} 28(4) (1996)
 
-Tracy, N., Young, Mason, R.: Multivariate Control Charts for Individual Observations. Journal of Quality Technology 24 (1992)
+Tracy, N., Young, Mason, R.: Multivariate Control Charts for Individual Observations. \emph{Journal of Quality Technology} 24 (1992)
 
-Woodall, W.H., Ncube, M.M.: Multivariate CUSUM Quality Control Procedures. Technometrics 3(3), (1985)
+Woodall, W.H., Ncube, M.M.: Multivariate CUSUM Quality Control Procedures. \emph{Technometrics} 3(3), (1985)
 }
 
 \keyword{ package }
 \seealso{
-#mpci
+MPCI package https://cran.r-project.org/package=MPC
 }
 \examples{
 data(dowel1)

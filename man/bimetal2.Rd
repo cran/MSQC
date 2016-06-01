@@ -2,11 +2,10 @@
 \alias{bimetal2}
 \docType{data}
 \title{
-Bimetal dataset in Phase II
+Bimetal dataset during the Phase II
 }
 \description{
-Bimetal thermostat has innumerable practical uses. This type of thermostat holds a bimetallic strip composed by two strips of different metals that convert the changing of temperature in mechanical displacement due to the difference in thermal expansion. 
-Certain type of strip composed of brass and steel is analyzed on a quality laboratory by testing the deflection, the curvature, the resistivity and hardness in low and high expansion sides. 
+The dataset contains measurements of the deflection, the curvature, the resistivity and the hardness in low and high expansion sides, from brass and steel bimetal thermostats. These observations represent the Phase II.
 }
 \usage{data(bimetal2)}
 \format{

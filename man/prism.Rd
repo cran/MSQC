@@ -2,10 +2,10 @@
 \alias{prism}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Make a prism 
+Draws a rectangular prism 
 }
 \description{
-This fucntion draws a prism
+This function draws a rectangular prism using three-dimensional limits
 }
 \usage{
 prism(LSL = LSL, USL = USL, add = TRUE, xlim = xlim, ylim = ylim, zlim = zlim, ...)
@@ -46,7 +46,6 @@ LSL <- c( 0.60, 0.30, 49.00)
 USL <- c(1.40, 1.70, 51.00)
 prism(LSL, USL, add = TRUE, col = "#D55E00" )
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+
 \keyword{ ~kwd1 }
 \keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

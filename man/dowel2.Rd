@@ -2,14 +2,14 @@
 \alias{dowel2}
 \docType{data}
 \title{
-Dowel pin dataset in Phase II
+Dowel pin dataset for the Phase II
 }
 \description{
-Diameter and length of a manufacturing process of a dowel pin
+Diameter and length of a dowel pin
 }
 \usage{data(dowel2)}
 \format{
-  A data frame with 40 observations on the following 2 variables.
+  A data frame with 32 observations.
   \describe{
     \item{\code{diameter}}{a numeric vector}
     \item{\code{length}}{a numeric vector}

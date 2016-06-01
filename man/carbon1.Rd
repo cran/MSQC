@@ -2,18 +2,19 @@
 \alias{carbon1}
 \docType{data}
 \title{
-Carbon fiber tubing in Phase I
+Carbon fiber tubing during the Phase I
 }
 \description{
-The manufacturing process of a specific carbon fiber tubing three correlated quality characteristics are measured: inner diameter, thickness and length of the tubes in inches. This dataset contains the information of a trivariate (p = 3) process in wich 30 samples of size 8 were collected 
+Three quality characteristics (inner diameter, thickness and length) are measured in a specific carbon fiber tube. 
+This dataset consist of 30 samples of size 8 were collected and the process is assumed to be stable.
 }
 \usage{data(carbon1)}
 \format{
-An array of (30 x 3 x 8).
+An array of dimensions 30 x 3 x 8.
   \describe{
-    \item{\code{"inner diameter"}}{is the inner diameter of the tubings}
-    \item{\code{"thickness"}}{is the thickness of the tubings }
-	\item{\code{"length"}}{is the length of the tubings }
+    \item{\code{"inner diameter"}}{is the inner diameter of the tubes}
+    \item{\code{"thickness"}}{is the thickness}
+	\item{\code{"length"}}{is the length}
   }
 }
 

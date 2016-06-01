@@ -5,20 +5,19 @@
 A pitching log of C.C. Sabathia on August 12, 2011
 }
 \description{
-The dataset was selected from games against Tampa Bay on August 12, 2011 
+The dataset is from the game against Tampa Bay on August 12, 2011 
 }
 \usage{data(sabathia2)}
 \format{
-  A data frame with 26 observations on the following 3 variables.
+  A data frame with 26 observations.
   \describe{
-    \item{\code{px}}{the x-axis is the horizontally oriented}
-    \item{\code{pz}}{the z-axis is the vertically oriented }
-    \item{\code{start speed}}{is the start speed of the fastball}
+    \item{\code{px}}{the x-axis horizontally oriented}
+    \item{\code{pz}}{the z-axis vertically oriented }
+    \item{\code{start speed}}{is the starting speed of the fastball}
   }
 }
 
 \examples{
 data(sabathia2)
-## maybe str(sabathia2) ; plot(sabathia2) ...
 }
 \keyword{datasets}

@@ -2,7 +2,7 @@
 \alias{water2}
 \docType{data}
 \title{
-A water quality test in Phase II
+A water quality test (Phase II)
 }
 \description{
 It consists on five variables (pH, phosphates (mg/L), nitrates (mg/L), dissolved oxygen and total solids (mg/L)) measured in a water quality test
@@ -15,6 +15,5 @@ It consists on five variables (pH, phosphates (mg/L), nitrates (mg/L), dissolved
 
 \examples{
 data(water2)
-## maybe str(water2) ; plot(water2) ...
 }
 \keyword{datasets}
