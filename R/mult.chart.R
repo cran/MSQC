@@ -1,14 +1,13 @@
 # MSQC package 
 # Functions included in the book: 
 # Santos-Fernandez, Edgar. Multivariate Statistical Quality Control Using R. Springer. 2013.
-# volume 14, isbn 9781461454533, http://www.springer.com/statistics/computational+statistics/book/978-1-4614-5452-6}
+# volume 14, isbn 9781461454533
  
 # Copyright (C) 2013-2015 Santos-Fernandez, Edgar
 # All rights reserved.
-# These functions are licensed under the GNU General Public License (GPL-2 and GPL-3).
 
 
-mult.chart <-
+mult.chart <- 
 function(type = c("chi","t2", "mewma", "mcusum", "mcusum2"),
                  x, Xmv, S, colm, alpha = 0.01, lambda = 0.1, k = 0.5,
  h = 5.5, phase = 1, method = "sw", ...){
@@ -33,7 +32,11 @@ type <- match.arg(type)
 ###Variables
 p <- ncol(x) # quality characteristics
 m <- nrow(x) # number of samples or observations
-if (class(x) == "matrix" || class(x) == "data.frame") (x <- array(data.matrix(x),c(m,p,1)))
+#if (class(x) == "matrix" || class(x) == "data.frame") (x <- array(data.matrix(x),c(m,p,1)))
+if (inherits(x, "matrix") || inherits(x, "data.frame") ) (
+  x <- array(data.matrix(x),c(m,p,1)))
+
+
 n <- dim(x)[3] # observations or sample size 
  
 if(!missing(Xmv))(phase <- 2)

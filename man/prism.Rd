@@ -47,5 +47,3 @@ USL <- c(1.40, 1.70, 51.00)
 prism(LSL, USL, add = TRUE, col = "#D55E00" )
 }
 
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

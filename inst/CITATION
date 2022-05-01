@@ -2,18 +2,18 @@ citHeader("To cite MSQC in publications use:")
 
 citEntry(entry = "Book",
   title        = "Multivariate Statistical Quality Control Using R",
-  author       = personList(as.person("Edgar Santos-Fern{\\'a}ndez")),
+  author       = personList(as.person("Edgar Santos-Fernandez")),
   publisher    = "Springer",
   year         = "2013",
   volume       = "14",
   isbn         = "9781461454533",
-  url          = "http://www.springer.com/statistics/computational+statistics/book/978-1-4614-5452-6",
+  url          = "https://link.springer.com/statistics/computational+statistics/book/978-1-4614-5452-6",
 
   textVersion  =
   paste("Edgar Santos-Fernandez(2013).",
         "Multivariate Statistical Quality Control Using R.",
         "Springer, 14.",
-        "URL http://www.springer.com/statistics/computational+statistics/book/978-1-4614-5452-6.")
+        "URL https://link.springer.com/statistics/computational+statistics/book/978-1-4614-5452-6")
 )
 
 

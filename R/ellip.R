@@ -4,7 +4,9 @@ type <- match.arg(type)
 
 p <- ncol(x) # quality characteristics
 m <- nrow(x) # number of samples or observations
-if (class(x) == "matrix" || class(x) == "data.frame") (x <- array(data.matrix(x),c(m,p,1)))
+if (inherits(x, "matrix") || inherits(x, "data.frame") ) (
+  x <- array(data.matrix(x),c(m,p,1)))
+#if (class(x) == "matrix" || class(x) == "data.frame") (x <- array(data.matrix(x),c(m,p,1)))
 n <- dim(x)[3] # observations or sample size 
  
 if(!missing(Xmv))(phase <- 2)

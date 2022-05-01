@@ -20,9 +20,10 @@ CL <- det(S)
 UCL <- det(S) / b1 * (b1 + 3 * b2 ^ .5) 
 
 
-t3 <- which(stat > UCL || stat < LCL )
+#t3 <- which(stat > UCL | stat < LCL )
+t3 <- c(which(stat > UCL), which(stat < LCL ))
 
-if(any(stat > UCL || stat < LCL)){
+if(any(stat > UCL | stat < LCL)){
      cat("The following(s) point(s) fall outside of the control limits" )
       print(t3)}
  

@@ -40,5 +40,3 @@ for (i in 1 : 5){
 
 }
 
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
